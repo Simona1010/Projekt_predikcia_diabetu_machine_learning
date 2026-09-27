@@ -24,7 +24,3 @@ Random Forest dosiahol najvyššie priemerné F1 v porovnaní modelov. Po laden�
 | 96,9 % | 0,97 | 0,68 | 0,80 |
 
 Podľa dôležitosti premenných v Random Foreste boli najvýznamnejšími vstupmi **HbA1c a glukóza**. Rozdiely medzi skupinami podľa fajčenia nemožno pripísať samotnému fajčeniu bez zohľadnenia veku a ďalších faktorov.
-
-## Obmedzenia
-
-Pri porovnaní modelov a ladení KNN sa normalizácia učí pred krížovou validáciou na celej tréningovej množine. Ďalším zlepšením je `Pipeline` s predspracovaním v každom folde. Výsledky platia pre tento dataset; projekt nie je určený na klinické rozhodovanie.
