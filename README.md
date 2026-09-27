@@ -13,19 +13,15 @@ Použitý [Diabetes Prediction Dataset](https://www.kaggle.com/datasets/iammusta
 - Porovnanie logistickej regresie, KNN, lineárneho SVM, Naive Bayes, Decision Tree a Random Forestu s referenčným Dummy modelom.
 - Krížová validácia, ladenie KNN a Random Forestu pomocou `GridSearchCV` a vyhodnotenie na testovacích dátach.
 
-Hlavnou metrikou je **F1 skóre pre triedu diabetes**. Samotná accuracy nestačí: predpovedanie väčšinovej triedy dosahuje približne 91 %, ale nezachytí žiadneho diabetika.
+Hlavnou metrikou je F1 skóre pre triedu diabetes. Samotná accuracy nestačí: predpovedanie väčšinovej triedy dosahuje približne 91 %, ale nezachytí žiadneho diabetika.
 
 ## Výsledky
 
 Random Forest dosiahol najvyššie priemerné F1 v porovnaní modelov. Po ladení dosiahol na testovacích dátach:
 
-| Accuracy | Precision¹ | Recall¹ | F1¹ |
+| Accuracy | Precision | Recall | F1 |
 | ---: | ---: | ---: | ---: |
 | 96,9 % | 0,97 | 0,68 | 0,80 |
-
-¹ Pre triedu diabetes.
-
-Správne identifikoval **1 145 z 1 696 diabetikov**, pričom **551 nezachytil** a vytvoril **39 falošných pozitívnych predikcií**. Má teda vysokú precision, ale približne tretinu diabetikov nerozpozná.
 
 Podľa dôležitosti premenných v Random Foreste boli najvýznamnejšími vstupmi **HbA1c a glukóza**. Rozdiely medzi skupinami podľa fajčenia nemožno pripísať samotnému fajčeniu bez zohľadnenia veku a ďalších faktorov.
 
